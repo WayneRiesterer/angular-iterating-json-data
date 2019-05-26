@@ -1,0 +1,22 @@
+<header>
+  <p>Demo response for <a href="https://stackoverflow.com/questions/56315284/i-need-a-helper-function-to-loop-through-complex-object-arrays-with-ngfor" target="_blank">Stack Overflow Question</a></p>
+</header>
+
+<h1>Fruit Data</h1>
+<p><span class="key">type:</span> {{ data.type }}</p>
+<p><span class="key">children:</span> {{ data.children }}</p>
+<hr>
+<div class="fruit" *ngFor="let fruit of getFruits()">
+	<h2>{{ fruit }}</h2>
+	<p><span class="key">type:</span> {{ getFruit(fruit).type }}</p>
+	<p><span class="key">children:</span> {{ getFruit(fruit).children }}</p>
+	<div class="variety" *ngFor="let variety of getVarieties(fruit)">
+		<h3>{{ variety }}</h3>
+		<p><span class="key">type:</span> {{ getVariety(fruit, variety).type }}</p>
+		<p><span class="key">articles:</span> {{ getArticles(fruit, variety) | json }}</p>
+		<div class="article" *ngFor="let article of getArticles(fruit, variety)">
+			<p><span class="key">key:</span> {{ article.key }}</p>
+			<p><span class="key">name:</span> {{ article.name }}</p>
+		</div>
+	</div>
+</div>

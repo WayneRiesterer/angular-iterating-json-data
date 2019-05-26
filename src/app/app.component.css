@@ -1,0 +1,26 @@
+p {
+  font-family: Lato;
+}
+
+.fruit, .variety, .article {
+  padding: 1rem;
+}
+
+.fruit {
+  margin: 1rem;
+  background-color: #333;
+  color: white;
+}
+
+.variety {
+  background-color: yellow;
+  color: black;
+}
+
+.article {
+  background-color: orange;
+}
+
+.key {
+  font-weight: bold;
+}
